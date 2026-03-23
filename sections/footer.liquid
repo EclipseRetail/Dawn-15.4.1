@@ -154,11 +154,6 @@
                       {%- endif -%}
                     </div>
                 {%- endcase -%}
-              
-
-              {% comment %} custom code {% endcomment %}
-              {%  render 'footer-newsletter' %}
-              {% comment %} custom code {% endcomment %}
               </div>
             {%- endfor -%}
           </div>
@@ -251,6 +246,10 @@
             {%- render 'social-icons', class: 'footer__list-social' -%}
           {%- endif -%}
         </div> {% endcomment %}
+
+      {% comment %} custom code {% endcomment %}
+      {%  render 'footer-newsletter' %}
+      {% comment %} custom code {% endcomment %}
       </div>
     {%- endunless -%}
   {%- endif -%}
