@@ -1,0 +1,86 @@
+<style>
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+  
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+  
+.slideshow-container .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  width: 100%;
+}
+
+.slideshow-container .mySlides {
+    display: none;
+}
+
+#cta_top-banner .mySlides a,
+#cta_top-banner .mySlides p {
+	align-items: center;
+	color: rgb(var(--color-foreground));
+    display: flex;
+	font-size: .9rem;
+	height: 4.5rem;
+    justify-content: center;
+	line-height: 1.6;
+	margin: unset;
+	text-align: center;
+    text-decoration: none;
+	text-transform: uppercase;
+}
+
+@media only screen and (max-width: 749px) {
+	#cta_top-banner .mySlides:not(:nth-child(2n)) {
+		display: none;
+	}
+}
+@media only screen and (min-width: 750px) {
+	.slideshow-container {
+		display: flex;
+		justify-content: space-between;
+		height: 45px;
+		position: relative;
+		margin: auto;
+	}
+	#cta_top-banner .medium-up--one-third {
+		display: inline-block !important;
+		text-align: center;
+		width: 33.33333%;
+	}
+}
+@media only screen and (min-width: 990px) {
+	#cta_top-banner .medium-up--one-third a {
+		font-size: 12px;
+	}
+}
+
+.C2A.top-banner.slideshow-container {
+    height: 45px;
+    position: relative;
+    margin: auto;
+    max-width: 1440px;
+}
+</style>
+
+<div id="cta_top-banner">
+	<div class="page-width">
+		<div class="C2A top-banner slideshow-container">
+			<div class="mySlides fade medium-up--one-third text-center">
+				{% render 'cta-top-banner-1' %}
+			</div>
+			<div class="mySlides fade medium-up--one-third text-center">
+				{% render 'cta-top-banner-2' %}
+			</div>
+			<div class="mySlides fade medium-up--one-third text-center">
+				{% render 'cta-top-banner-3' %}
+			</div>
+		</div>
+	</div>
+</div>
