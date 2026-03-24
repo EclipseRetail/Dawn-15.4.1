@@ -4,7 +4,10 @@
   Usage:
   {% render 'header-mega-menu' %}
 {% endcomment %}
-
+<script>
+  element.addEventListener('mouseenter', openMenu);
+element.addEventListener('mouseleave', closeMenu);
+</script>
 <style>
   .site-header__logo img {
   	 display: block;
@@ -35,6 +38,7 @@
      top: 69px;
   	 transition: opacity 250ms ease-in-out;
   	 transition-delay: 0.05s;
+     transform: translateY(0);
   }
    .site-nav--has-dropdown:hover .mega-menu__content .site-nav__dropdown {
   	 padding: 1rem;
