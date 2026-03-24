@@ -173,7 +173,9 @@
         if section.settings.menu_type_desktop == 'dropdown'
           render 'header-dropdown-menu'
         elsif section.settings.menu_type_desktop != 'drawer'
-          render 'header-mega-menu'
+        {% comment %} render 'header-mega-menu'   {% endcomment %}
+        {% comment %} excel additions {% endcomment %}
+          render 'excel-header-mega-menu'
         endif
       endif
     %}
