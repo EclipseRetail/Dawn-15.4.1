@@ -366,6 +366,46 @@
       };
     </script>
 
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (!window.matchMedia('(hover: hover)').matches) return;
+
+        const menuItems = document.querySelectorAll('li.menu-item');
+
+        menuItems.forEach((item) => {
+          const details = item.querySelector('details.mega-menu');
+          const summary = item.querySelector('summary[aria-controls]');
+
+          if (!details || !summary) return;
+
+          let closeTimer;
+
+          item.addEventListener('mouseenter', () => {
+            clearTimeout(closeTimer);
+
+            // Optional: close other open mega menus first
+            document.querySelectorAll('details.mega-menu[open]').forEach((openDetails) => {
+              if (openDetails !== details) {
+                openDetails.removeAttribute('open');
+                const openSummary = openDetails.querySelector('summary[aria-expanded]');
+                if (openSummary) openSummary.setAttribute('aria-expanded', 'false');
+              }
+            });
+
+            details.setAttribute('open', '');
+            summary.setAttribute('aria-expanded', 'true');
+          });
+
+          item.addEventListener('mouseleave', () => {
+            closeTimer = setTimeout(() => {
+              details.removeAttribute('open');
+              summary.setAttribute('aria-expanded', 'false');
+            }, 100);
+          });
+        });
+      });
+    </script>
+
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -373,5 +413,6 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
   </body>
 </html>
