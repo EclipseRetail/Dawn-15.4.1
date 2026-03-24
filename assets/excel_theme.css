@@ -60,7 +60,4 @@ section.section-collection-list slider-component ul.collection-list li.collectio
     details[open]>.header__menu-item {
         text-decoration: none;
     }
-    .site-nav > li {
-        display: contents;
-    }
 }
