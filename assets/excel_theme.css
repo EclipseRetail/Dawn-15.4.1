@@ -36,15 +36,28 @@ section.section-collection-list slider-component ul.collection-list li.collectio
 }
 
 @media screen and (min-width: 990px) {
+    .header__menu-item .icon-caret {
+        display: none;
+    }
     .header--middle-left {
         grid-template-columns: auto auto auto;
     }
     .header:not(.drawer-menu).page-width {
+        max-width: 100vw;
         padding-left: 0;
         padding-right: 0;
     }
+    .header:not(.drawer-menu).page-width .header__inline-menu {
+        display: flex;
+        justify-content: center;
+    }
     nav.header__inline-menu {
-        background: beige;
+        background: #EFEAE5;
         width: -webkit-fill-available;
+    }
+    .header__active-menu-item,
+    .header__menu-item:hover span,
+    details[open]>.header__menu-item {
+        text-decoration: none;
     }
 }
