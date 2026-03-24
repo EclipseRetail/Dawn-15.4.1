@@ -5,10 +5,152 @@
   {% render 'header-mega-menu' %}
 {% endcomment %}
 
+<style>
+  .site-header__logo img {
+  	 display: block;
+  }
+   .site-nav {
+  	 padding: 0;
+  	 text-align: center;
+  	 margin: 0;
+  }
+   .site-nav a {
+  	 padding: 0 20px;
+  }
+   .site-nav--has-dropdown .site-nav__dropdown {
+  	 box-sizing: border-box;
+  	 height: max-content;
+  	 left: -9999px;
+  	 opacity: 0;
+  	 padding: 0;
+  	 position: absolute;
+  	 transition: opacity 0.2s ease-in-out;
+  	 width: 100vw;
+  }
+   .site-nav--has-dropdown:hover .site-nav__dropdown {
+     background: white;
+     border-bottom: 1px solid rgb(var(--color-foreground));
+  	 left: 0;
+  	 opacity: 1;
+     top: 69px;
+  	 transition: opacity 250ms ease-in-out;
+  	 transition-delay: 0.05s;
+  }
+   .site-nav--has-dropdown:hover .site-nav__dropdown .site-nav__dropdown {
+  	 padding: 1rem;
+  	 text-align: left;
+  }
+   .site-nav--has-dropdown:hover .site-nav__dropdown .site-nav__dropdown .grid {
+  	 margin: 0 auto;
+  	 max-width: 1003px;
+  }
+   .site-nav--has-dropdown:hover > a span:before {
+  	 -webkit-transform: scaleX(1);
+  	 -ms-transform: scaleX(1);
+  	 transform: scaleX(1);
+  }
+   .site-nav--has-dropdown.is-active .holder {
+  	 left: 0;
+  	 opacity: 1;
+  	 transition: opacity 250ms ease-in-out;
+  	 transition-delay: 0.05s;
+  }
+  @media screen and (min-width: 990px) {
+    .header:not(.drawer-menu).page-width {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .site-nav > li {
+        align-items: center;
+        display: flex;
+        height: 69px;
+    }
+  }
+  /*================ Site Nav Links ================*/
+   .site-nav__link {
+  	 display: block;
+  	 white-space: nowrap;
+  }
+   .site-nav--centered .site-nav__link {
+  	 padding-top: 0;
+  }
+   .site-nav__link .icon-chevron-down {
+  	 display: none;
+  	 width: calc(8em / 16);
+  	 height: calc(8em / 16);
+  	 margin-left: 0.5rem;
+  }
+   .site-nav__link.site-nav--active-dropdown {
+  	 border-bottom: 1px solid transparent;
+  	 z-index: 2;
+  }
+   nav.site-nav .list-menu--inline a {
+  	 color: rgb(var(--color-foreground));
+  	 font-family: var(--font-body-family);
+  	 text-decoration: none;
+  	 font-size: 16px;
+  	 line-height: 28px;
+  }
+   .site-nav__link--button {
+  	 border: none;
+  	 background-color: transparent;
+  }
+   .site-nav__link--button:focus, .site-nav__link--button:hover {
+  	 text-decoration: none;
+  }
+  ul.site-nav__childlist-grid {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .site-nav__dropdown ul.site-nav__childlist-grid {
+      margin: 0 auto;
+      max-width: var(--page-width);
+  }
+  ul.site-nav__childlist-grid li.site-nav__childlist-item {
+      display: block;
+      -webkit-flex: 0 1 auto;
+      -moz-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      margin-bottom: 15px;
+      padding-left: 30px;
+      width: 33%;
+  }
+  li {
+    list-style: none;
+  }
+  .site-nav__dropdown ul li a {
+      font-size: 14px;
+      text-transform: uppercase;
+  }
+  ul.site-nav__childlist-grid li.site-nav__childlist-item {
+      list-style-image: unset;
+      text-align: left;
+  }
+  ul.site-nav__childlist-grid li.site-nav__childlist-item ul {
+      padding: 0;
+  }
+  .site-nav__childlist-item .site-nav__child-link {
+      padding: 4px 15px 5px 0;
+  }
+  .site-nav__child-link--parent {
+      font-weight: 700;
+      margin: 4px 0;
+      pointer-events: none;
+  }
+</style>
+
 <nav class="header__inline-menu">
   <ul class="site-nav list--inline {{ nav_alignment }} list-menu list-menu--inline" role="list" id="SiteNav"></ul>
     {%- for link in section.settings.menu.links -%}
-      <li>
+      <li class="site-nav--has-dropdown{% if three_level_nav %} site-nav--has-centered-dropdown{% endif %}{% if link.active %} site-nav--active{% endif %}" data-has-dropdowns>
         {%- if link.links != blank -%}
           <header-menu>
             <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
