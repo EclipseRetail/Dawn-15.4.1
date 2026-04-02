@@ -19,18 +19,15 @@
 .product-single__title .vendor {
     color: rgb(var(--color-foreground));
 }
-
-
-/* homepage collections list */
-section.section-collection-list slider-component ul.collection-list li.collection-list__item .card--media .card__content .card__information {
+.price--on-sale .price__sale {
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
 }
-section.section-collection-list slider-component ul.collection-list li.collection-list__item .card--media .card__inner + .card__content {
-    display: none;
+.price--on-sale .price-item--regular {
+    color: #898988;
+    font-size: 1.4rem;
 }
-
 .vendor {
     font-size: calc(var(--font-heading-scale) * 3rem);
     display: block;
@@ -40,6 +37,15 @@ section.section-collection-list slider-component ul.collection-list li.collectio
   .product__title .h1 {
     font-size: calc(var(--font-heading-scale) * 1.8rem);
   }
+}
+/* homepage collections list */
+section.section-collection-list slider-component ul.collection-list li.collection-list__item .card--media .card__content .card__information {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+section.section-collection-list slider-component ul.collection-list li.collection-list__item .card--media .card__inner + .card__content {
+    display: none;
 }
 
 @media screen and (min-width: 990px) {
