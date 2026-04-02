@@ -23,6 +23,9 @@
 .product .price__container {
     letter-spacing: 0;
 }
+.price__container .product__tax {
+    display: none;
+}
 .product__info-container .price--on-sale .price__sale {
     align-items: center;
     display: flex;
