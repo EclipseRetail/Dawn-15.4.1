@@ -50,6 +50,10 @@
     font-size: 1.4rem;
 }
 /* accordian */
+.product__accordion.accordion {
+    border-bottom: 0;
+    border-top: 0;
+}
 .product__accordion.accordion summary {
     padding: .5rem 0;
 }
