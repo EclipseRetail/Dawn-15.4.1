@@ -23,7 +23,7 @@
 .product .price__container {
     letter-spacing: 0;
 }
-.price__container .product__tax {
+.product__info-container .product__tax {
     display: none;
 }
 .product__info-container .price--on-sale .price__sale {
