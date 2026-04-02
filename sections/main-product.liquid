@@ -90,20 +90,20 @@
               {%- when '@app' -%}
                 {% render block %}
               {%- when 'text' -%}
-                <p
-                  class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                <h1 
+                  class="vendor product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                   {{ block.shopify_attributes }}
                 >
                   {{- block.settings.text -}}
-                </p>
+                </h1>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
                   <h1>{{ product.title | escape }}</h1>
-                  <a href="{{ product.url }}" class="product__title">
+                  {% comment %} <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
                       {{ product.title | escape }}
                     </h2>
-                  </a>
+                  </a> {% endcomment %}
                 </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
