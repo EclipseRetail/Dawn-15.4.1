@@ -60,6 +60,11 @@
 .product__accordion.accordion summary .icon-caret {
     left: 0;
 }
+.product__accordion.accordion summary .accordion__title {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+    
 .accordion .summary__title {
     margin-left: 2rem;
 }
