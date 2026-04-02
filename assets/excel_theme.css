@@ -50,10 +50,10 @@
     font-size: 1.4rem;
 }
 /* accordian */
-.accordion summary {
+.product__accordion.accordion summary {
     padding: .5rem 0;
 }
-.accordion summary .icon-caret {
+.product__accordion.accordion summary .icon-caret {
     left: 0;
 }
 .accordion .summary__title {
