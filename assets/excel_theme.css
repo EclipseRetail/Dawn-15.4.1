@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: row-reverse;
 }
+
 .product__info-container .price .price-item--sale {
     color: red;
     font-size: 2.4rem;
