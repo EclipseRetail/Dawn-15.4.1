@@ -31,6 +31,19 @@ footer .footer-block__details-content .list-menu__item--link {
 footer .footer-block__heading {
     font-weight: 700;
 }
+/* FEATURED COLLECTIONS */
+.card__heading {
+    font-size: 1.3rem;
+}
+.card__heading.vendor {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase
+}
+.card__heading > a {
+    text-decoration: none;
+}
 
 /* PRODUCT PAGE */
 .product .price__container {
