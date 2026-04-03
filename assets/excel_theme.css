@@ -1,3 +1,5 @@
+
+/* footer */
 .footer-block__details-content .list-menu__item--link,
 .footer-block__details-content .list-menu__item--link:hover {
     text-decoration: none !important;
@@ -15,12 +17,8 @@
 .footer-block__newsletter .newsletter-form__field-wrapper .field__label {
     color: rgb(var(--color-background));
 }
+
 /* Product page */
-/* .product-single__title .vendor {
-    color: rgb(var(--color-foreground));
-    font-size: calc(var(--font-heading-scale) * 3rem);
-    display: block;
-} */
 .product .price__container {
     letter-spacing: 0;
 }
