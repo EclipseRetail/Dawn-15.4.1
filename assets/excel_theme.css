@@ -41,7 +41,8 @@ footer .footer-block__heading {
     padding-bottom: 0.5rem;
     text-transform: uppercase
 }
-.card__heading a {
+.card__heading a,
+.underline-links-hover:hover a {
     text-decoration: none;
 }
 
