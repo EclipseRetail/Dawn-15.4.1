@@ -36,6 +36,9 @@ footer .footer-block__heading {
 .product .price__container {
     letter-spacing: 0;
 }
+.product__info-container .product-form {
+    margin: 1rem 0;
+}
 .product__info-container .product__description {
     font-size: 1.3rem;
     line-height: 2rem;
@@ -80,9 +83,14 @@ footer .footer-block__heading {
     margin-left: 2rem;
 }
 /* spacing */
+.product__info-container>*+*,
 .product__info-container .product-form {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
+.product-form__input--dropdown {
+    margin-bottom: 0;
+}
+
 
 .vendor {
     color: rgb(var(--color-foreground));
