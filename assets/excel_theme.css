@@ -177,3 +177,16 @@ section.section-collection-list slider-component ul.collection-list li.collectio
         text-decoration: none;
     }
 }
+
+@media(min-width: 1000px) {
+    details-modal.header__search,
+    .header__icons.header__icons--localization {
+        margin: 0 calc((100vw - 768px) /2);
+    }
+}
+@media(min-width: 1400px) {
+    details-modal.header__search,
+    .header__icons.header__icons--localization {
+        margin: 0 calc((100vw - 1400px) /2);
+    }
+}
