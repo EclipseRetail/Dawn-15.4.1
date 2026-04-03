@@ -56,6 +56,9 @@
 
 {% style %}
   .c2a-trustmetrics-section {
+    border-bottom: 1px solid rgba(var(--color-background-contrast));
+    border-top: 1px solid rgba(var(--color-background-contrast));
+    margin: 0 10rem;
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
@@ -118,9 +121,9 @@
   .c2a-trustmetrics__image {
     display: block;
     height: 100%;
-    max-height: 9.5rem;
+    max-height: 7.5rem;
     opacity: 0.8;
-    padding: 25px 0;
+    padding: 1.5rem 0;
     width: 100%;
   }
 
@@ -156,6 +159,7 @@
 
     .c2a-trustmetrics__content {
       padding: 2.4rem;
+      padding-bottom: 0;
     }
   }
 {% endstyle %}

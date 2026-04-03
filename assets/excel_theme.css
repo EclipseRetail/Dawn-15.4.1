@@ -42,7 +42,7 @@ footer .footer-block__heading {
     text-transform: uppercase
 }
 .card__heading a,
-.product-card-wrapper .underline-links-hover:hover a {
+.product-card-wrapper.underline-links-hover:hover a {
     text-decoration: none;
 }
 
