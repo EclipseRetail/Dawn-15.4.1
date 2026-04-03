@@ -73,8 +73,8 @@ footer .footer-block__heading {
 .product__info-container .price--on-sale .price__badge-sale {
     display: none;
 }
-.product .product__info-container .price--on-sale .price-item--regular {
-    color: #898988;
+.price--on-sale .price-item--regular {
+    color: rgba(var(--color-foreground), .5);
     font-size: 1.4rem;
 }
 /* accordians */
