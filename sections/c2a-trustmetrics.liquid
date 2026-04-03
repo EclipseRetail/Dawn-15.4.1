@@ -21,7 +21,7 @@
     <div class="c2a-trustmetrics-grid c2a-trustmetrics-grid--{{ columns }}">
       {% for block in section.blocks %}
         <article class="image-text-card" {{ block.shopify_attributes }}>
-          <div class="image-text-card__media">
+          <div class="c2a-trustmetrics__media">
             {% if block.settings.image != blank %}
               {{
                 block.settings.image
@@ -30,20 +30,20 @@
                   loading: 'lazy',
                   widths: '360, 540, 720, 960, 1200',
                   sizes: '(min-width: 990px) 33vw, 100vw',
-                  class: 'image-text-card__image'
+                  class: 'c2a-trustmetrics__image'
               }}
             {% else %}
-              {{ 'image' | placeholder_svg_tag: 'image-text-card__image image-text-card__image--placeholder' }}
+              {{ 'image' | placeholder_svg_tag: 'c2a-trustmetrics__image c2a-trustmetrics__image--placeholder' }}
             {% endif %}
           </div>
 
-          <div class="image-text-card__content image-text-card__content--{{ block.settings.text_alignment }}">
+          <div class="c2a-trustmetrics__content c2a-trustmetrics__content--{{ block.settings.text_alignment }}">
             {% if block.settings.title != blank %}
-              <h3 class="image-text-card__title">{{ block.settings.title }}</h3>
+              <h3 class="c2a-trustmetrics__title">{{ block.settings.title }}</h3>
             {% endif %}
 
             {% if block.settings.text != blank %}
-              <div class="image-text-card__text rte">
+              <div class="c2a-trustmetrics__text rte">
                 {{ block.settings.text }}
               </div>
             {% endif %}
@@ -78,18 +78,21 @@
     margin: 0;
   }
 
+  .c2a-trustmetrics__content--left,
   .c2a-trustmetrics-section__header--left {
     text-align: left;
     margin-left: 0;
     margin-right: auto;
   }
 
+  .c2a-trustmetrics__content--center,
   .c2a-trustmetrics-section__header--center {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
 
+  .c2a-trustmetrics__content--right,
   .c2a-trustmetrics-section__header--right {
     text-align: right;
     margin-left: auto;
@@ -112,7 +115,7 @@
     height: 100%;
   }
 
-  .image-text-card__image {
+  .c2a-trustmetrics__image {
     display: block;
     height: 100%;
     max-height: 9.5rem;
@@ -121,19 +124,19 @@
     width: 100%;
   }
 
-  .image-text-card__content {
+  .c2a-trustmetrics__content {
     padding: 2rem;
   }
 
-  .image-text-card__title {
+  .c2a-trustmetrics__title {
     margin: 0 0 1rem;
   }
 
-  .image-text-card__text > *:first-child {
+  .c2a-trustmetrics__text > *:first-child {
     margin-top: 0;
   }
 
-  .image-text-card__text > *:last-child {
+  .c2a-trustmetrics__text > *:last-child {
     margin-bottom: 0;
   }
 
@@ -146,7 +149,7 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .image-text-card__content {
+    .c2a-trustmetrics__content {
       padding: 2.4rem;
     }
   }
