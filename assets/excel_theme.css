@@ -62,9 +62,10 @@ footer .footer-block__heading {
   z-index: 0;
 }
 .related-products__heading span {
-  position: relative;
   background: white; /* this creates the "cut" effect */
-  padding: 0 10px;
+  letter-spacing: 0;
+  padding: 0 2rem;
+  position: relative;
   z-index: 1;
 }
 
