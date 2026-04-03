@@ -83,11 +83,11 @@ footer .footer-block__heading {
     margin-left: 2rem;
 }
 /* spacing */
-.product__info-container>*+*,
-.product__info-container .product-form {
+.product__info-wrapper .product__info-container>*+*,
+.product__info-wrapper .product__info-container .product-form {
     margin: 1rem 0;
 }
-.product-form__input--dropdown {
+.product__info-wrapper .product-form__input--dropdown {
     margin-bottom: 0;
 }
 
