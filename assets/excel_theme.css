@@ -17,13 +17,13 @@
 .footer-block__newsletter .newsletter-form__field-wrapper .field__label {
     color: rgb(var(--color-background));
 }
-.footer-block__heading,
-.footer-block__details-content .list-menu__item--link {
+footer .footer-block__heading,
+footer .footer-block__details-content .list-menu__item--link {
     color: white;
     font-size: 1.2rem;
     text-transform: uppercase;
 }
-.footer-block__heading {
+footer .footer-block__heading {
     font-weight: 700;
 }
 
