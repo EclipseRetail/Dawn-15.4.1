@@ -8,7 +8,7 @@
 <section class="c2a-trustmetrics-section color-{{ section.settings.color_scheme }}">
   <div class="page-width">
     {% if section.settings.heading != blank or section.settings.subheading != blank %}
-      <div class="c2a-trustmetrics-section__header">
+      <div class="c2a-trustmetrics-section__header c2a-trustmetrics-section__header--{{ section.settings.header_alignment }}">
         {% if section.settings.subheading != blank %}
           <p class="c2a-trustmetrics-section__subheading">{{ section.settings.subheading }}</p>
         {% endif %}
@@ -153,9 +153,24 @@
       "default": "C2A Trustmetrics"
     },
     {
-      "type": "text_alignment",
-      "id": "alignment",
-      "label": "Alignment"
+      "type": "select",
+      "id": "header_alignment",
+      "label": "Header alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
     },
     {
       "type": "color_scheme",
@@ -199,6 +214,26 @@
           "id": "title",
           "label": "Title",
           "default": "Card title"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text alignment",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
         },
         {
           "type": "richtext",
