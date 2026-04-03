@@ -37,7 +37,7 @@
             {% endif %}
           </div>
 
-          <div class="image-text-card__content">
+          <div class="image-text-card__content image-text-card__content--{{ block.settings.text_alignment }}">
             {% if block.settings.title != blank %}
               <h3 class="image-text-card__title">{{ block.settings.title }}</h3>
             {% endif %}
@@ -76,6 +76,24 @@
 
   .c2a-trustmetrics-section__heading {
     margin: 0;
+  }
+
+  .c2a-trustmetrics-section__header--left {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .c2a-trustmetrics-section__header--center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .c2a-trustmetrics-section__header--right {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
   }
 
   .c2a-trustmetrics-grid {
