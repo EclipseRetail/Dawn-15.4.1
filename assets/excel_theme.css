@@ -1,6 +1,7 @@
 /* HEADER */
-header-menu .link {
+.header__inline-menu .link {
     font-size: 1.6rem;
+    font-weight: 400;
 }
 
 /* FOOTER */
