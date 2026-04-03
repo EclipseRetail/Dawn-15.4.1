@@ -1,7 +1,3 @@
-<div class="text-block text-{{ block.settings.alignment }}">
-  {{ block.settings.text }}
-</div>
-
 {% stylesheet %}
   .text-left {
     text-align: left;
@@ -15,6 +11,12 @@
     text-align: right;
   }
 {% endstylesheet %}
+
+<div class="text-block text-{{ block.settings.alignment }}">
+  {{ block.settings.text }}
+</div>
+
+{% content_for 'blocks' %}
 
 {% schema %}
 {
@@ -30,6 +32,11 @@
       "id": "alignment",
       "label": "Alignment"
     },
+  ],
+  "blocks": [
+    {
+        "type": "@theme"
+    }
   ],
   "presets": [
     { "name": "Text" },
