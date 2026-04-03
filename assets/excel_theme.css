@@ -26,7 +26,7 @@
     font-size: 1.3rem;
     line-height: 2rem;
 }
-
+/* Price */
 .product__info-container .product__tax {
     display: none;
 }
@@ -35,7 +35,6 @@
     display: flex;
     flex-direction: row-reverse;
 }
-
 .product__info-container .price .price-item--sale {
     color: red;
     font-size: 2.4rem;
@@ -47,7 +46,7 @@
     color: #898988;
     font-size: 1.4rem;
 }
-/* accordian */
+/* accordians */
 .product__accordion.accordion {
     border-bottom: 0;
     border-top: 0;
@@ -62,9 +61,12 @@
     font-size: 1.3rem;
     text-transform: uppercase;
 }
-    
 .accordion .summary__title {
     margin-left: 2rem;
+}
+/* spacing */
+.product__info-container .product-form {
+    margin: 1.5rem 0;
 }
 
 .vendor {
