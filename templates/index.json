@@ -227,18 +227,18 @@
     "theme_blocks_hLWa4y": {
       "type": "theme-blocks",
       "blocks": {
-        "text_jYaacP": {
+        "text_V4cmRn": {
           "type": "text",
-          "name": "Text",
+          "name": "Content",
           "settings": {
-            "text": "",
+            "text": "<p>Hello, world!</p>",
             "alignment": "left"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "text_jYaacP"
+        "text_V4cmRn"
       ],
       "name": "Theme blocks",
       "settings": {
