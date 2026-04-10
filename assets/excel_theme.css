@@ -104,9 +104,8 @@ footer .footer-block__heading {
 .product__info-container .price--on-sale .price__badge-sale {
     display: none;
 }
-.price--on-sale .price-item--regular {
+.price.price--on-sale .price-item--regular {
     color: rgba(var(--color-foreground), .5);
-    font-size: 1.4rem;
 }
 
 /* accordians */
