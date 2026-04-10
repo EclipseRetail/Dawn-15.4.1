@@ -103,9 +103,8 @@
         "row_Ew7wXB"
       ],
       "custom_css": [],
-      "name": "Multirow",
+      "name": "homepage-brand-blocks",
       "settings": {
-        "multirow_css_name": "homepage-brand-blocks",
         "image_height": "medium",
         "desktop_image_width": "medium",
         "image_layout": "alternate-left",
@@ -131,7 +130,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 5,
+        "columns_desktop": 4,
         "enable_desktop_slider": true,
         "full_width": false,
         "show_view_all": false,
@@ -213,7 +212,7 @@
             "image": "shopify://shop_images/delivery-outline.svg",
             "title": "INTERNATIONAL SHIPPING",
             "text_alignment": "center",
-            "text": "<p>Please  <a href=\"https://www.excelclothing.com/delivery\" target=\"_self\"><strong>click here</strong></a>  to view our worldwide delivery rates.</p>",
+            "text": "<p>Please <a href=\"https://www.excelclothing.com/delivery\" target=\"_self\"><strong>click here</strong></a> to view our worldwide delivery rates.</p>",
             "header_alignment": "center"
           }
         },
@@ -233,7 +232,7 @@
             "image": "shopify://shop_images/returns-outline.svg",
             "title": "HASSLE FREE RETURNS",
             "text_alignment": "center",
-            "text": "<p><a href=\"https://www.excelclothing.com/contact-us\" target=\"_self\"><strong>Contact us</strong></a>  and we'll email you a FREE RETURNS label within 14 days of delivery.</p>",
+            "text": "<p><a href=\"https://www.excelclothing.com/contact-us\" target=\"_self\"><strong>Contact us</strong></a> and we'll email you a FREE RETURNS label within 14 days of delivery.</p>",
             "header_alignment": "center"
           }
         }
