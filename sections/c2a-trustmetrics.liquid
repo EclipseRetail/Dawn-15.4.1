@@ -54,6 +54,25 @@
   </div>
 </section>
 
+<script>
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+		var i;
+		var x = document.getElementsByClassName("image-text-card");
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";
+		}
+		myIndex++;
+		if (myIndex > x.length) {
+			myIndex = 1
+		}
+		x[myIndex - 1].style.display = "block";
+		setTimeout(carousel, 2000); // Change image every 2 seconds
+	}
+</script>
+
 {% style %}
 
   @keyframes fade {
@@ -66,7 +85,7 @@
     to {opacity: 1}
   }
     
-  .c2a-trustmetrics-grid article.image-text-card .fade {
+  .c2a-trustmetrics-grid article.image-text-card.fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
