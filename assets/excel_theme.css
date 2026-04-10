@@ -42,7 +42,7 @@ footer .footer-block__heading {
     height: 3.4rem;
 }
 .card__heading.vendor {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 400;
     padding-bottom: 0.5rem;
     text-transform: uppercase
@@ -107,6 +107,11 @@ footer .footer-block__heading {
 }
 .product__info-container .price--on-sale .price__badge-sale {
     display: none;
+}
+.product__info-container .product-form__input--pill input[type=radio]+label {
+    height: 4rem;
+    padding: 1rem 0;
+    width: 4rem;
 }
 .price.price--on-sale .price-item--regular {
     color: rgba(var(--color-foreground), .5);
