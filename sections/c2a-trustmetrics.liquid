@@ -18,38 +18,40 @@
       </div>
     {% endif %}
 
-    <div class="c2a-trustmetrics-grid c2a-trustmetrics-grid--{{ columns }}">
-      {% for block in section.blocks %}
-        <article class="image-text-card fade" {{ block.shopify_attributes }}>
-          <div class="c2a-trustmetrics__media">
-            {% if block.settings.image != blank %}
-              {{
-                block.settings.image
-                | image_url: width: 1200
-                | image_tag:
-                  loading: 'lazy',
-                  widths: '360, 540, 720, 960, 1200',
-                  sizes: '(min-width: 990px) 33vw, 100vw',
-                  class: 'c2a-trustmetrics__image'
-              }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'c2a-trustmetrics__image c2a-trustmetrics__image--placeholder' }}
-            {% endif %}
-          </div>
+    <div class="image-text-carousel">
+      <div class="image-text-carousel-track c2a-trustmetrics-grid c2a-trustmetrics-grid--{{ columns }}">
+        {% for block in section.blocks %}
+          <article class="image-text-card fade" {{ block.shopify_attributes }}>
+            <div class="c2a-trustmetrics__media">
+              {% if block.settings.image != blank %}
+                {{
+                  block.settings.image
+                  | image_url: width: 1200
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '360, 540, 720, 960, 1200',
+                    sizes: '(min-width: 990px) 33vw, 100vw',
+                    class: 'c2a-trustmetrics__image'
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'c2a-trustmetrics__image c2a-trustmetrics__image--placeholder' }}
+              {% endif %}
+            </div>
 
-          <div class="c2a-trustmetrics__content c2a-trustmetrics__content--{{ block.settings.text_alignment }}">
-            {% if block.settings.title != blank %}
-              <h3 class="c2a-trustmetrics__title">{{ block.settings.title }}</h3>
-            {% endif %}
+            <div class="c2a-trustmetrics__content c2a-trustmetrics__content--{{ block.settings.text_alignment }}">
+              {% if block.settings.title != blank %}
+                <h3 class="c2a-trustmetrics__title">{{ block.settings.title }}</h3>
+              {% endif %}
 
-            {% if block.settings.text != blank %}
-              <div class="c2a-trustmetrics__text rte">
-                {{ block.settings.text }}
-              </div>
-            {% endif %}
-          </div>
-        </article>
-      {% endfor %}
+              {% if block.settings.text != blank %}
+                <div class="c2a-trustmetrics__text rte">
+                  {{ block.settings.text }}
+                </div>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
@@ -58,7 +60,7 @@
   let myIndex = 0;
 
   function carouselSlide() {
-    const track = document.querySelector(".c2a-trustmetrics-grid");
+    const track = document.querySelector(".image-text-carousel-track");
     const cards = document.querySelectorAll(".image-text-card");
 
     if (!track || cards.length === 0) return;
@@ -79,7 +81,7 @@
   setInterval(carouselSlide, 2000);
 
   window.addEventListener("resize", function () {
-    const track = document.querySelector(".c2a-trustmetrics-grid");
+    const track = document.querySelector(".image-text-carousel-track");
     if (window.innerWidth > 768 && track) {
       track.style.transform = "none";
     }
@@ -117,12 +119,12 @@
     }
   } */
 
-  .c2a-trustmetrics-section {
+  .image-text-carousel {
     overflow: hidden;
     width: 100%;
   }
 
-  .c2a-trustmetrics-grid {
+  .image-text-carousel-track {
     display: flex;
     transition: transform 0.5s ease;
     will-change: transform;
@@ -135,11 +137,11 @@
 
   /* Desktop: show all 3 */
   @media screen and (min-width: 769px) {
-    .c2a-trustmetrics-section {
+    .image-text-carousel {
       overflow: visible;
     }
 
-    .c2a-trustmetrics-grid {
+    .image-text-carousel-track {
       display: flex;
       transform: none !important;
       transition: none;
