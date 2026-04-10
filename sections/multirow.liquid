@@ -42,7 +42,7 @@
   endunless
 -%}
 
-<div class="multirow name6 {{ section.settings.title }} section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+<div class="multirow name7 {{ section.settings.title | handle }} section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
   <div class="multirow__inner page-width">
     {%- for block in section.blocks -%}
       <div
