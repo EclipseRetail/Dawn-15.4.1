@@ -55,27 +55,40 @@
 </section>
 
 <script>
-	var myIndex = 0;
-	carousel();
+  let myIndex = 0;
 
-	function carousel() {
-		var i;
-		var x = document.getElementsByClassName("image-text-card");
-		for (i = 0; i < x.length; i++) {
-			x[i].style.display = "none";
-		}
-		myIndex++;
-		if (myIndex > x.length) {
-			myIndex = 1
-		}
-		x[myIndex - 1].style.display = "block";
-		setTimeout(carousel, 2000); // Change image every 2 seconds
-	}
+  function carouselSlide() {
+    const track = document.querySelector(".c2a-trustmetrics-grid");
+    const cards = document.querySelectorAll(".image-text-card");
+
+    if (!track || cards.length === 0) return;
+
+    // Only run carousel on mobile
+    if (window.innerWidth <= 768) {
+      myIndex++;
+      if (myIndex >= cards.length) {
+        myIndex = 0;
+      }
+
+      track.style.transform = "translateX(-" + (myIndex * 100) + "%)";
+    } else {
+      track.style.transform = "none";
+    }
+  }
+
+  setInterval(carouselSlide, 2000);
+
+  window.addEventListener("resize", function () {
+    const track = document.querySelector(".c2a-trustmetrics-grid");
+    if (window.innerWidth > 768 && track) {
+      track.style.transform = "none";
+    }
+  });
 </script>
 
 {% style %}
 
-  @keyframes fade {
+  /* @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
   }
@@ -102,7 +115,42 @@
     .c2a-trustmetrics-grid article.image-text-card:not(:nth-child(2n)) {
       display: none;
     }
+  } */
+
+  .c2a-trustmetrics-section {
+    overflow: hidden;
+    width: 100%;
   }
+
+  .c2a-trustmetrics-grid {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+
+  .image-text-card {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+  }
+
+  /* Desktop: show all 3 */
+  @media screen and (min-width: 769px) {
+    .c2a-trustmetrics-section {
+      overflow: visible;
+    }
+
+    .c2a-trustmetrics-grid {
+      display: flex;
+      transform: none !important;
+      transition: none;
+      gap: 20px; /* optional */
+    }
+
+    .image-text-card {
+      flex: 1 1 33.333%;
+    }
+  }
+
 
   .c2a-trustmetrics-grid article.image-text-card {
       height: 18rem;
