@@ -21,7 +21,7 @@
     <div class="image-text-carousel">
       <div class="image-text-carousel-track">
         {% for block in section.blocks %}
-          <div class="image-text-card" {{ block.shopify_attributes }}>
+          <article class="image-text-card" {{ block.shopify_attributes }}>
             <div class="c2a-trustmetrics__media">
               {% if block.settings.image != blank %}
                 {{
@@ -49,7 +49,7 @@
                 </div>
               {% endif %}
             </div>
-          </div>
+          </article>
         {% endfor %}
       </div>
     </div>
@@ -88,7 +88,7 @@
   });
 </script>
 
-{% style %}
+<style>
 
   /* @keyframes fade {
     from {opacity: .4}
@@ -282,7 +282,7 @@
       width: 33.33%;
     }
   }
-{% endstyle %}
+</style>
 
 {% schema %}
 {
