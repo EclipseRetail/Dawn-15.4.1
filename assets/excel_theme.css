@@ -71,7 +71,8 @@ footer .footer-block__heading {
   position: relative;
   z-index: 1;
 }
-.price--on-sale .price-item--sale {
+.price--on-sale .price-item--sale,
+.price .price-item.price-item--regular {
     font-size: 1.3rem;
 }
 
