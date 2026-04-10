@@ -20,7 +20,7 @@
 
     <div class="c2a-trustmetrics-grid c2a-trustmetrics-grid--{{ columns }}">
       {% for block in section.blocks %}
-        <article class="image-text-card" {{ block.shopify_attributes }}>
+        <article class="image-text-card fade" {{ block.shopify_attributes }}>
           <div class="c2a-trustmetrics__media">
             {% if block.settings.image != blank %}
               {{
@@ -55,6 +55,43 @@
 </section>
 
 {% style %}
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+    
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+    
+  .c2a-trustmetrics-grid article.image-text-card .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    width: 100%;
+  }
+
+  article.image-text-card {
+      display: none;
+  }
+
+
+  @media only screen and (max-width: 749px) {
+    .c2a-trustmetrics-grid article.image-text-card:not(:nth-child(2n)) {
+      display: none;
+    }
+  }
+
+  .c2a-trustmetrics-grid article.image-text-card {
+      /* height: 45px; */
+      position: relative;
+      margin: auto;
+      /* max-width: 1440px; */
+  }
+
   .c2a-trustmetrics-section {
     border-bottom: 1px solid rgba(var(--color-background-contrast));
     border-top: 1px solid rgba(var(--color-background-contrast));
