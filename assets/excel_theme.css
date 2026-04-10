@@ -87,7 +87,8 @@ footer .footer-block__heading {
 .product__info-container .product-form {
     margin: 1rem 0;
 }
-.product__info-container .product__description {
+.product__info-container .product__description,
+.product__accordion .accordion__content p {
     font-size: 1.3rem;
     line-height: 2rem;
 }
