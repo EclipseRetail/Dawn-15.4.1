@@ -64,7 +64,6 @@ footer .footer-block__heading {
   width: 100%;
   height: 1px;
   background: rgba(var(--color-foreground), .25);
-  /* transform: translateY(-50%); */
   z-index: 0;
 }
 .related-products__heading span {
@@ -79,6 +78,11 @@ footer .footer-block__heading {
 .price .price-item.price-item--regular {
     font-size: 1.3rem;
     font-weight: 500;
+}
+
+/* HOMEPAGE MULTIROW */
+.homepage-brand-blocks p {
+    font-size: 1.4rem;
 }
 
 /* PRODUCT PAGE */
