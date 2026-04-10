@@ -57,38 +57,35 @@
 </section>
 
 <script>
-  let myIndex = 0;
+  document.addEventListener("DOMContentLoaded", function () {
+    let myIndex = 0;
 
-  function carouselSlide() {
-    const track = document.querySelector(".image-text-carousel-track"); console.log(track);
-    const cards = document.querySelectorAll(".image-text-card"); console.log(cards);
+    function carouselSlide() {
+      const track = document.querySelector(".image-text-carousel-track");
+      const cards = document.querySelectorAll(".image-text-card");
 
-    if (!track || cards.length === 0) return;
+      console.log("track:", track);
+      console.log("cards:", cards);
 
-    // Only run carousel on mobile
-    if (window.innerWidth <= 768) {
-      myIndex++;
-      if (myIndex >= cards.length) {
-        myIndex = 0;
+      if (!track || cards.length === 0) return;
+
+      if (window.innerWidth <= 768) {
+        myIndex++;
+        if (myIndex >= cards.length) {
+          myIndex = 0;
+        }
+
+        track.style.transform = "translateX(-" + (myIndex * 100) + "%)";
+      } else {
+        track.style.transform = "none";
       }
-
-      track.style.transform = "translateX(-" + (myIndex * 100) + "%)";
-    } else {
-      track.style.transform = "none";
     }
-  }
 
-  setInterval(carouselSlide, 2000);
-
-  window.addEventListener("resize", function () {
-    const track = document.querySelector(".image-text-carousel-track");
-    if (window.innerWidth > 768 && track) {
-      track.style.transform = "none";
-    }
+    setInterval(carouselSlide, 2000);
   });
 </script>
 
-<style>
+{% style %}
 
   /* @keyframes fade {
     from {opacity: .4}
@@ -282,7 +279,7 @@
       width: 33.33%;
     }
   }
-</style>
+{% endstyle %}
 
 {% schema %}
 {
