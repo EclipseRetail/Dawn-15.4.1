@@ -42,7 +42,7 @@
   endunless
 -%}
 
-<div class="multirow {{ section.settings.multirow_css_name | handle }} section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+<div class="multirow name8 {{ section.settings.new_name | handle }} section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
   <div class="multirow__inner page-width">
     {%- for block in section.blocks -%}
       <div
@@ -117,9 +117,8 @@
   "settings": [
     {
       "type": "text",
-      "id": "multirow_css_name",
-      "label": "Add a custom CSS class to the section",
-      "info": "This is for advanced users comfortable with editing CSS. The class name should be unique and must not contain spaces. Example: 'my-custom-class'."
+      "id": "new_name",
+      "label": "Rename your name"
     },
     {
       "type": "header",
