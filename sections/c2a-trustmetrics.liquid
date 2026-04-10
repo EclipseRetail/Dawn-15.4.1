@@ -58,9 +58,13 @@
   .c2a-trustmetrics-section {
     border-bottom: 1px solid rgba(var(--color-background-contrast));
     border-top: 1px solid rgba(var(--color-background-contrast));
-    margin: 0 10rem;
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  @media (min-width: 750px) {
+    .c2a-trustmetrics-section {
+      margin: 0 10rem;
+    }
   }
 
   .c2a-trustmetrics-section__header {
