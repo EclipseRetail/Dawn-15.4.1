@@ -35,6 +35,9 @@ footer .footer-block__heading {
 .card__heading {
     font-size: 1.3rem;
 }
+.card__heading > .full-unstyled-link {
+    height: 3.4rem;
+}
 .card__heading.vendor {
     font-size: 1.1rem;
     font-weight: 400;
@@ -67,6 +70,9 @@ footer .footer-block__heading {
   padding: 0 2rem;
   position: relative;
   z-index: 1;
+}
+.price--on-sale .price-item--sale {
+    font-size: 1.3rem;
 }
 
 /* PRODUCT PAGE */
@@ -101,6 +107,7 @@ footer .footer-block__heading {
     color: rgba(var(--color-foreground), .5);
     font-size: 1.4rem;
 }
+
 /* accordians */
 .product__accordion.accordion {
     border-bottom: 0;
