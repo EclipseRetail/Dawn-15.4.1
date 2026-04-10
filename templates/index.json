@@ -102,10 +102,8 @@
         "row_WqEh6t",
         "row_Ew7wXB"
       ],
-      "custom_css": [
-        "body {font-size: 13px; letter-spacing: 1.5px;}"
-      ],
-      "name": "t:sections.multirow.presets.name",
+      "custom_css": [],
+      "name": "homepage-brand-blocks",
       "settings": {
         "image_height": "medium",
         "desktop_image_width": "medium",
