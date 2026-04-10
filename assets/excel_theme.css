@@ -1,3 +1,6 @@
+/* import full Montserrat family */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 /* HEADER */
 .header__inline-menu .link {
     font-size: 1.6rem;
