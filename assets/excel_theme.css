@@ -109,9 +109,19 @@ footer .footer-block__heading {
     display: none;
 }
 .product__info-container .product-form__input--pill input[type=radio]+label {
+    font-size: 10px;
     height: 4rem;
-    padding: 1rem 0;
+    padding: 1.3rem 0;
     width: 4rem;
+}
+.product__info-container .product-form__buttons button.product-form__submit.button {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    background-color: #E15A1D;
+    border: 0;
+}
+.product__info-container .product-form__buttons button.product-form__submit.button:after {
+    box-shadow: 0 0 0 0;
 }
 .price.price--on-sale .price-item--regular {
     color: rgba(var(--color-foreground), .5);
@@ -153,12 +163,12 @@ footer .footer-block__heading {
     display: block;
     font-size: calc(var(--font-heading-scale) * 3rem);
 }
-@media only screen and (min-width: 750px) {
-    .product__title h1,
-    .product__title .h1 {
-        font-size: calc(var(--font-heading-scale) * 1.8rem);
-    }
+/* @media only screen and (min-width: 750px) { */
+.product__title h1,
+.product__title .h1 {
+    font-size: calc(var(--font-heading-scale) * 1.8rem);
 }
+/* } */
 
 /* homepage collections list */
 section.section-collection-list slider-component ul.collection-list li.collection-list__item .card--media .card__content .card__information {
