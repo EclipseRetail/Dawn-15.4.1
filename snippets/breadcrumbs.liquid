@@ -2,17 +2,19 @@
   .breadcrumbs__list {
     list-style-type: none;
     margin: 1rem auto;
-    padding: 0 5rem;
+    padding: 0 1.5rem;
   }
-
+  @media (min-width: 750px) {
+    .breadcrumbs__list {
+      padding: 0 5rem;
+    }
+  }
   .breadcrumbs__item {
     display: inline-block;
   }
-
   .breadcrumbs__item:nth-child(n+2) {
     margin-left: 1rem;
   }
-
   .breadcrumbs__item:not(:last-child):after {
     border-style: solid;
     border-width: .10em .10em 0 0;
@@ -25,19 +27,21 @@
     vertical-align: middle;
     width: .20em;
   }
-
   .breadcrumbs__link {
     font-size: 1.3rem;
     font-weight: bold;
     text-decoration: none;
   }
-
+  @media (min-width: 750px) {
+    .breadcrumbs__link {
+      font-size: 1.1rem;
+    }
+  }
   .breadcrumbs__link[aria-current="page"] {
     color: inherit;
     font-weight: normal;
     text-decoration: none;
   }
-
   .breadcrumbs__link[aria-current="page"]:hover,
   .breadcrumbs__link[aria-current="page"]:focus {
     text-decoration: underline;
