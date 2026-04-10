@@ -14,6 +14,7 @@
       "blocks": {
         "heading": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Image banner",
             "heading_size": "h0"
@@ -21,6 +22,7 @@
         },
         "text": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
@@ -28,6 +30,7 @@
         },
         "button": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Shop all",
             "button_link_1": "shopify://collections/all",
@@ -44,11 +47,12 @@
         "button"
       ],
       "settings": {
+        "image": "shopify://shop_images/Hero-Barbour-Womens-SS26-1950.jpg",
         "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image_height": "adapt",
         "image_behavior": "none",
         "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "right",
         "show_text_box": false,
         "color_scheme": "scheme-3",
         "stack_images_on_mobile": false,
@@ -56,35 +60,66 @@
         "show_text_below": false
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "multirow_T73QJU": {
+      "type": "multirow",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "row_qEn3U3": {
+          "type": "row",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "image": "shopify://shop_images/two-column-holland-cooper.jpg",
+            "caption": "WOMENS / BRANDS",
+            "heading": "HOLLAND COOPER",
+            "text": "<p>An innate love of the countryside, the great outdoors, and chic individual style is woven throughout every collection, crafting luxury with functionality.</p>",
+            "button_label": "Button label",
+            "button_link": ""
           }
         },
-        "text": {
-          "type": "text",
+        "row_WqEh6t": {
+          "type": "row",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "image": "shopify://shop_images/two-column-carhartt.jpg",
+            "caption": "MENS / BRANDS",
+            "heading": "CARHARTT WIP",
+            "text": "<p>Crafted from durable midweight polycotton twill, these utilitarian layers and updated classics evoke a nostalgic vibe with their 60s-inspired shades of rich brown and sleek steel blue. Despite their relaxed fit, they exude a modern flair.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_Ew7wXB": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/two-column-yeti.jpg",
+            "caption": "LIFESTYLE / BRANDS",
+            "heading": "YETI",
+            "text": "<p>Over-engineered ice chests, coolers, bottles, and accessories are the pinnacle of performance and durability.</p>",
+            "button_label": "Button label",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "row_qEn3U3",
+        "row_WqEh6t",
+        "row_Ew7wXB"
       ],
-      "disabled": true,
+      "custom_css": [
+        "body {font-size: 13px; letter-spacing: 1.5px;}"
+      ],
+      "name": "t:sections.multirow.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "featured_collection": {
@@ -99,7 +134,7 @@
         "description_style": "body",
         "columns_desktop": 5,
         "enable_desktop_slider": true,
-        "full_width": true,
+        "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "scheme-1",
@@ -145,7 +180,7 @@
       ],
       "disabled": true,
       "settings": {
-        "heading": "Multimedia collage",
+        "heading": "",
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
@@ -170,89 +205,94 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "c2a_trustmetrics_eMtphV": {
+      "type": "c2a-trustmetrics",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "card_kRaV88": {
+          "type": "card",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/delivery-outline.svg",
+            "title": "INTERNATIONAL SHIPPING",
+            "text_alignment": "center",
+            "text": "<p>Please  <a href=\"https://www.excelclothing.com/delivery\" target=\"_self\"><strong>click here</strong></a>  to view our worldwide delivery rates.</p>",
+            "header_alignment": "center"
           }
         },
-        "column2": {
-          "type": "column",
+        "card_rePD3z": {
+          "type": "card",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/trustpilot-5stars.svg",
+            "title": "OUR CUSTOMERS LOVE US...",
+            "text_alignment": "center",
+            "text": "<p>Check out what they're saying.</p>",
+            "header_alignment": "center"
           }
         },
-        "column3": {
-          "type": "column",
+        "card_VBK34b": {
+          "type": "card",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/returns-outline.svg",
+            "title": "HASSLE FREE RETURNS",
+            "text_alignment": "center",
+            "text": "<p><a href=\"https://www.excelclothing.com/contact-us\" target=\"_self\"><strong>Contact us</strong></a>  and we'll email you a FREE RETURNS label within 14 days of delivery.</p>",
+            "header_alignment": "center"
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "card_kRaV88",
+        "card_rePD3z",
+        "card_VBK34b"
+      ],
+      "name": "C2A Trustmetrics",
+      "settings": {
+        "subheading": "",
+        "heading": "",
+        "header_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
       ],
       "disabled": true,
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "theme_blocks_hLWa4y": {
-      "type": "theme-blocks",
-      "blocks": {
-        "text_V4cmRn": {
-          "type": "text",
-          "name": "Content",
-          "settings": {
-            "text": "<p>Hello, world!</p>",
-            "alignment": "left"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_V4cmRn"
-      ],
-      "name": "Theme blocks",
-      "settings": {
-        "color_scheme": ""
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "image_banner",
-    "rich_text",
+    "multirow_T73QJU",
     "featured_collection",
     "collage",
     "video",
-    "multicolumn",
-    "theme_blocks_hLWa4y"
+    "c2a_trustmetrics_eMtphV",
+    "rich_text"
   ]
 }
