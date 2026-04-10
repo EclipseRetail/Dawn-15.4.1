@@ -132,6 +132,9 @@ footer .footer-block__heading {
 }
 
 /* accordians */
+.product__info-wrapper .product__info-container > .product__accordion {
+    margin: 0;
+}
 .product__accordion.accordion {
     border-bottom: 0;
     border-top: 0;
