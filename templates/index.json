@@ -103,9 +103,9 @@
         "row_Ew7wXB"
       ],
       "custom_css": [],
-      "name": "homepage-brand-blocks",
+      "name": "Multirow",
       "settings": {
-        "new_name": "homepage-brand-blocks",
+        "multirow_css_name": "homepage-brand-blocks",
         "image_height": "medium",
         "desktop_image_width": "medium",
         "image_layout": "alternate-left",
