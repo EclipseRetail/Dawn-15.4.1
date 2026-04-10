@@ -105,6 +105,7 @@
       "custom_css": [],
       "name": "homepage-brand-blocks",
       "settings": {
+        "new_name": "homepage-brand-blocks",
         "image_height": "medium",
         "desktop_image_width": "medium",
         "image_layout": "alternate-left",
