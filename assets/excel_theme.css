@@ -76,6 +76,7 @@ footer .footer-block__heading {
 }
 .price--on-sale .price-item--sale,
 .price .price-item.price-item--regular {
+    color: red;
     font-size: 1.3rem;
     font-weight: 500;
 }
