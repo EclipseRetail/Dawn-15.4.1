@@ -79,7 +79,7 @@ footer .footer-block__heading {
 .price .price-item.price-item--regular {
     color: red;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 .card--media .card__inner .card__content .card__badge {
     display: none;
