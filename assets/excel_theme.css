@@ -102,6 +102,9 @@ footer .footer-block__heading {
     font-size: 1.3rem;
     line-height: 2rem;
 }
+.product__info-container .product__description .product.attribute.overview .value {
+    padding-bottom: 1rem;
+}
 
 /* Price */
 .product__info-container .product__tax {
