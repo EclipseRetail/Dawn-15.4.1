@@ -34,8 +34,15 @@
           "type": "price",
           "settings": {}
         },
+        "custom_liquid_NNHRnp": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% assign current_mpn = product.metafields['shopify--facts']['mpn'].value %}\n{% assign current_collection = product.collections.first %}\n{{current_collection.value}}\n{% if current_collection %}\n  {% paginate current_collection.products by 100 %}\n    {% for p in current_collection.products %}\n      {% assign p_mpn = p.metafields['shopify--facts']['mpn'].value %}\n      {% if p_mpn == current_mpn %}\n        <a href=\"{{ p.url }}\">\n          {% if p.featured_image %}\n            <img\n              src=\"{{ p.featured_image | image_url: width: 100 }}\"\n              alt=\"{{ p.title }}\"\n              loading=\"lazy\"\n            >\n          {% endif %}\n        </a>\n      {% endif %}\n    {% endfor %}\n  {% endpaginate %}\n{% endif %}"
+          }
+        },
         "custom_liquid_znEGJi": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<style>\n.mpn-related-item.is-active {\n  border: 2px solid black;\n}\n</style>\n{% assign current_mpn = product.metafields['shopify--facts']['mpn'].value %}\n\n{% for p in collections.all.products %}\n  {% assign p_mpn = p.metafields['shopify--facts']['mpn'].value %}\n\n  {% if p_mpn == current_mpn %}\n    <a href=\"{{ p.url }}\" class=\"mpn-related-item {% if p.id == product.id %}is-active{% endif %}\">\n      <img src=\"{{ p.featured_image | image_url: width: 50 }}\" alt=\"{{ p.title }}\" loading=\"lazy\">\n    </a>\n  {% endif %}\n{% endfor %}"
           }
@@ -129,6 +136,7 @@
         "title",
         "caption",
         "price",
+        "custom_liquid_NNHRnp",
         "custom_liquid_znEGJi",
         "custom_liquid_3EBRQN",
         "variant_picker",
