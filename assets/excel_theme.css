@@ -196,6 +196,9 @@ klarna-placement[data-key="top-strip-promotion-badge"]::part(osm-container) {
     background-color: #EFEAE5;
     padding: 1rem;
 }
+klarna-placement[data-key=top-strip-promotion-badge]::part(osm-container) p.osm-message {
+    font-size: 1rem;
+}
 
 .vendor {
     color: rgb(var(--color-foreground));
