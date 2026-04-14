@@ -35,6 +35,7 @@
     "text_boxes_shadow_blur": 5,
     "media_shadow_vertical_offset": 0,
     "media_shadow_blur": 5,
+    "popup_border_opacity": 10,
     "popup_shadow_vertical_offset": 4,
     "popup_shadow_blur": 5,
     "drawer_shadow_vertical_offset": 4,
