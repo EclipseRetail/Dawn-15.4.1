@@ -43,7 +43,7 @@
       "type": "featured-collection",
       "settings": {
         "collection": "all",
-        "multirow_css_name": "related-products",
+        "multirow_css_name": ".related-products",
         "products_to_show": 4,
         "title": "Featured collectionssss",
         "heading_size": "h2",
