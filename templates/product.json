@@ -37,7 +37,7 @@
         "custom_liquid_gJiYQE": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<style>\n.mpn-related-item.is-active {\n  border: 1px solid black;\n}\n.mpn-switcher {\n    display: flex;\n}\n</style>\n{% assign grouped = product.metafields['custom']['grouped_products'].value %}\n<div class=\"mpn-switcher\">\n  {% for p in grouped %}\n    <a href=\"{{ p.url }}\">\n      <img src=\"{{ p.featured_image | image_url: width: 50 }}\" alt=\"{{ p.title }}\" loading=\"lazy\" class=\"mpn-related-item {% if p.id == product.id %}is-active{% endif %}\">\n    </a>\n  {% endfor %}\n</div>"
+            "custom_liquid": "<style>\n.mpn-related-item.is-active {\n  border: 1px solid black;\n}\n.mpn-switcher {\n    display: flex;\n}\n.mpn-switcher-item {\n    margin-right: 1rem;\n}\n</style>\n{% assign grouped = product.metafields['custom']['grouped_products'].value %}\n<div class=\"mpn-switcher\">\n  {% for p in grouped %}\n    <a href=\"{{ p.url }}\" class=\"mpn-switcher-item\">\n      <img src=\"{{ p.featured_image | image_url: width: 50 }}\" alt=\"{{ p.title }}\" loading=\"lazy\" class=\"mpn-related-item {% if p.id == product.id %}is-active{% endif %}\">\n    </a>\n  {% endfor %}\n</div>"
           }
         },
         "custom_liquid_NNHRnp": {
