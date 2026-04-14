@@ -34,11 +34,17 @@
           "type": "price",
           "settings": {}
         },
+        "custom_liquid_t6KUhh": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% for product in product.metafields.shopify--facts.mpn.value %}\n  <a href=\"{{ product.url }}\">{{ product.title }}</a>\n{% endfor %}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "dropdown",
-            "swatch_shape": "circle"
+            "picker_type": "button",
+            "swatch_shape": "square"
           }
         },
         "quantity_selector": {
@@ -62,7 +68,7 @@
           "settings": {
             "heading": "Product Description",
             "icon": "none",
-            "content": "{{ block.settings.page.content }}",
+            "content": "{{ product.metafields.custom.bullets | metafield_tag }}",
             "page": ""
           }
         },
@@ -71,7 +77,7 @@
           "settings": {
             "heading": "Materials",
             "icon": "none",
-            "content": "",
+            "content": "<p>{{ product.metafields.custom.material | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -80,7 +86,7 @@
           "settings": {
             "heading": "Care Instructions",
             "icon": "none",
-            "content": "",
+            "content": "<p>{{ product.metafields.custom.care_instructions | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -116,6 +122,7 @@
         "title",
         "caption",
         "price",
+        "custom_liquid_t6KUhh",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -199,47 +206,53 @@
         "padding_bottom": 28
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "c2a_trustmetrics_eUmthW": {
+      "type": "c2a-trustmetrics",
       "blocks": {
-        "column-0": {
-          "type": "column",
+        "card_T7yGQP": {
+          "type": "card",
           "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/delivery-outline.svg",
+            "title": "INTERNATIONAL SHIPPING",
+            "text_alignment": "center",
+            "text": "<p>Please  <a href=\"https://www.excelclothing.com/delivery\" target=\"_self\"><strong>click here</strong></a>  to view our worldwide delivery rates.</p>",
+            "header_alignment": "center"
           }
         },
-        "column-1": {
-          "type": "column",
+        "card_XgpnpK": {
+          "type": "card",
           "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify://shop_images/trustpilot-5stars.svg",
+            "title": "OUR CUSTOMERS LOVE US...",
+            "text_alignment": "center",
+            "text": "<p>Check out what they're saying.</p>",
+            "header_alignment": "center"
+          }
+        },
+        "card_xxW4Tq": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/returns-outline.svg",
+            "title": "HASSLE FREE RETURNS",
+            "text_alignment": "center",
+            "text": "<p><a href=\"https://www.excelclothing.com/contact-us\" target=\"_self\"><strong>Contact us</strong></a>  and we'll email you a FREE RETURNS label within 14 days of delivery.</p>",
+            "header_alignment": "center"
           }
         }
       },
       "block_order": [
-        "column-0",
-        "column-1"
+        "card_T7yGQP",
+        "card_XgpnpK",
+        "card_xxW4Tq"
       ],
+      "name": "C2A Trustmetrics",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "subheading": "",
+        "heading": "",
+        "header_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     }
   },
@@ -247,6 +260,6 @@
     "main",
     "image-with-text",
     "related-products",
-    "multicolumn"
+    "c2a_trustmetrics_eUmthW"
   ]
 }
