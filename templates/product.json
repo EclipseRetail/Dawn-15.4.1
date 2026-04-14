@@ -12,12 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "custom_liquid_gJiYQE": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<style>\n.mpn-related-item.is-active {\n  border: 1px solid black;\n}\n</style>\n{% assign grouped = product.metafields['custom']['grouped_products'].value %}\n\n{% for p in grouped %}\n  <a href=\"{{ p.url }}\">\n    <img src=\"{{ p.featured_image | image_url: width: 50 }}\" alt=\"{{ p.title }}\" loading=\"lazy\" class=\"mpn-related-item {% if p.id == product.id %}is-active{% endif %}\">\n  </a>\n{% endfor %}"
-          }
-        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -39,6 +33,12 @@
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "custom_liquid_gJiYQE": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n.mpn-related-item.is-active {\n  border: 1px solid black;\n}\n</style>\n{% assign grouped = product.metafields['custom']['grouped_products'].value %}\n\n{% for p in grouped %}\n  <a href=\"{{ p.url }}\">\n    <img src=\"{{ p.featured_image | image_url: width: 50 }}\" alt=\"{{ p.title }}\" loading=\"lazy\" class=\"mpn-related-item {% if p.id == product.id %}is-active{% endif %}\">\n  </a>\n{% endfor %}"
+          }
         },
         "custom_liquid_NNHRnp": {
           "type": "custom_liquid",
@@ -139,11 +139,11 @@
         }
       },
       "block_order": [
-        "custom_liquid_gJiYQE",
         "vendor",
         "title",
         "caption",
         "price",
+        "custom_liquid_gJiYQE",
         "custom_liquid_NNHRnp",
         "custom_liquid_znEGJi",
         "custom_liquid_3EBRQN",
