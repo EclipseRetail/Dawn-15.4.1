@@ -15,7 +15,7 @@
         "custom_liquid_gJiYQE": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% assign grouped = product.metafields['custom']['grouped_products'].value %}\n\n{% for p in grouped %}\n  <a href=\"{{ p.url }}\">\n    <img src=\"{{ p.featured_image | image_url: width: 50 }}\" alt=\"{{ p.title }}\" loading=\"lazy\">\n  </a>\n{% endfor %}"
+            "custom_liquid": "<style>\n.mpn-related-item.is-active {\n  border: 2px solid black;\n}\n</style>\n{% assign grouped = product.metafields['custom']['grouped_products'].value %}\n\n{% for p in grouped %}\n  <a href=\"{{ p.url }}\">\n    <img src=\"{{ p.featured_image | image_url: width: 50 }}\" alt=\"{{ p.title }}\" loading=\"lazy\" class=\"mpn-related-item {% if p.id == product.id %}is-active{% endif %}\">\n  </a>\n{% endfor %}"
           }
         },
         "vendor": {
