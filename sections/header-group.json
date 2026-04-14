@@ -57,7 +57,7 @@
     },
     "custom_liquid_daBVGD": {
       "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+      "name": "CTA Top Banner",
       "settings": {
         "custom_liquid": "{%- render 'cta_top-banner' -%}",
         "color_scheme": "scheme-3",

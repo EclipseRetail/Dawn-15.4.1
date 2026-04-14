@@ -103,8 +103,9 @@
         "row_Ew7wXB"
       ],
       "custom_css": [],
-      "name": "homepage-brand-blocks",
+      "name": "Multirow",
       "settings": {
+        "multirow_css_name": "homepage-brand-blocks",
         "image_height": "medium",
         "desktop_image_width": "medium",
         "image_layout": "alternate-left",
@@ -124,6 +125,7 @@
       "type": "featured-collection",
       "settings": {
         "collection": "all",
+        "multirow_css_name": "related-products__heading",
         "products_to_show": 15,
         "title": "Featured products",
         "heading_size": "h2",
@@ -258,14 +260,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "EXCEL CLOTHING",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<h3>Shop Designer clothes from International and British Designers at Excel Clothing online.</h3><p>Starting in 1987, Excel Clothing is now celebrated as one of the UK'S and Irelands leading designer brand retailers. With two stores, excel clothing provides over 15000 sq ft of luxurious retail space. With top brands such as Armani, Barbour, Belstaff, Moose Knuckles, Paul Smith, RM Williams, Sandbanks and Holland Cooper to name but a few, Excel Clothing continues to build its brand portfolio for an every expanding list of customers.</p><p></p><h3>Mens, Womens and Kidswear</h3><p>Whether in store or online Excel Clothing provides an exciting and cool space to shop allowing each carefully selected Brand their own identity which in turn reflects the company’s philosophy of the importance of individualism and attention to detail. These beliefs are considered not only when searching each season for the best fashion and accessories the worlds most important labels have created, but also when serving our customers. Excel offers a wide assortment of clothing, accessories and jewellery to the discerning customer. Online or in-store, Excel remains dedicated to always providing our customers with distinctive merchandise and superior service.</p>"
           }
         }
       },
