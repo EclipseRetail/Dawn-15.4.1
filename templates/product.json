@@ -15,7 +15,7 @@
         "custom_liquid_3EBRQN": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% assign current_mpn = product.metafields['custom']['related_products'].value %}\n<p>current_mpn of current product{{ current_mpn }}</p>\n\n{% for p in collections.all.products %}\n  {% assign p_mpn = p.metafields['custom']['related_products'].value %}\n  <p>{{ p_mpn }}, {{ current_mpn }}, {{ p.title }}</p>\n  {% if p_mpn == current_mpn and p.id != product.id %}  %}\n    <a href=\"{{ p.url }}\">{{ p.title }}</a>\n  {% endif %}\n{% endfor %}"
+            "custom_liquid": "{% assign current_mpn = product.metafields['custom']['related_products'].value %}\n\n{% for p in collections.all.products %}\n  {% assign p_mpn = p.metafields['custom']['related_products'].value %}\n  {% if p_mpn == current_mpn and p.id != product.id %}\n    <a href=\"{{ p.url }}\">{{ p.title }}</a>\n  {% endif %}\n{% endfor %}"
           }
         },
         "vendor": {
