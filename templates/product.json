@@ -12,12 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "custom_liquid_3EBRQN": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% assign current_mpn = product.metafields['custom']['related_products'].value %}\n\n{% for p in collections.all.products %}\n  {% assign p_mpn = p.metafields['custom']['related_products'].value %}\n  {% if p_mpn == current_mpn and p.id != product.id %}\n    <a href=\"{{ p.url }}\">{{ p.title }}</a>\n  {% endif %}\n{% endfor %}"
-          }
-        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -40,11 +34,10 @@
           "type": "price",
           "settings": {}
         },
-        "custom_liquid_t6KUhh": {
+        "custom_liquid_3EBRQN": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
-            "custom_liquid": "{% assign current_mpn = product.metafields['shopify--facts']['mpn'].value %}\n<p>{{ current_mpn }}</p>\n{% for p in collections.all.products %}\n  <p>{{ p }}</p>\n  {% assign p_mpn = p.product.metafields['shopify--facts']['mpn'].value %}\n<p>{{ p_mpn }}</p>\n  {% if p_mpn == current_mpn and p.id != product.id %}\n    <a href=\"{{ p.url }}\">{{ p.title }}</a>\n  {% endif %}\n{% endfor %}"
+            "custom_liquid": "{% assign current_mpn = product.metafields['custom']['related_products'].value %}\n\n{% for p in collections.all.products %}\n  {% assign p_mpn = p.metafields['custom']['related_products'].value %}\n  {% if p_mpn == current_mpn and p.id != product.id %}\n    <a href=\"{{ p.url }}\">{{ p.title }}</a>\n  {% endif %}\n{% endfor %}"
           }
         },
         "variant_picker": {
@@ -125,12 +118,11 @@
         }
       },
       "block_order": [
-        "custom_liquid_3EBRQN",
         "vendor",
         "title",
         "caption",
         "price",
-        "custom_liquid_t6KUhh",
+        "custom_liquid_3EBRQN",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
