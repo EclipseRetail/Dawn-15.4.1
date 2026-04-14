@@ -37,7 +37,7 @@
         "custom_liquid_t6KUhh": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% assign current_mpn = product.metafields.shopify--facts.mpn.value %}\n\n{% for p in collections.all.products %}\n  {% assign p_mpn = p.metafields.shopify--facts.mpn.value %}\n\n  {% if p_mpn == current_mpn and p.id != product.id %}\n    <a href=\"{{ p.url }}\">{{ p.title }}</a>\n  {% endif %}\n{% endfor %}"
+            "custom_liquid": "{%- if product.metafields.shopify--facts.mpn.value -%}\n<div class=\"colour-variants\">\n  <p>Select Colour</p>\n  {%- for alt_product in product.metafields.shopify--facts.mpn.value -%}\n    {%- if alt_product.available -%}\n    <a href=\"{{ alt_product.url }}\" title=\"{{ alt_product.title }}\"><img src=\"{{ alt_product.featured_image | img_url: '40x40', crop: 'center', format: 'pjpg' }}\" alt=\"{{ alt_product.title }}\" loading=\"lazy\"></a>\n    {%- endif -%}\n  {%- endfor -%}\n</div>\n{%- endif -%}"
           }
         },
         "variant_picker": {
