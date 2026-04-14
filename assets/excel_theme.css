@@ -191,6 +191,11 @@ footer .footer-block__heading {
     margin-bottom: 0;
 }
 
+/* Klarna Placement */
+klarna-placement[data-key="top-strip-promotion-badge"]::part(osm-container) {
+    background-color: #EFEAE5;
+    padding: 1rem;
+}
 
 .vendor {
     color: rgb(var(--color-foreground));
