@@ -54,9 +54,10 @@ footer .footer-block__heading {
 }
 div#insta-feed h2,
 .related-products__heading {
+    max-width: 100%;
     position: relative;
-    width: 100%;
     text-align: center;
+    width: 100%;
 }
 div#insta-feed h2:before,
 .related-products__heading:before {
