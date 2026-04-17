@@ -52,11 +52,13 @@ footer .footer-block__heading {
 .product-card-wrapper.underline-links-hover:hover a {
     text-decoration: none;
 }
+div#insta-feed h2,
 .related-products__heading {
     position: relative;
     width: 100%;
     text-align: center;
 }
+div#insta-feed h2:before,
 .related-products__heading:before {
   content: "";
   position: absolute;
@@ -67,6 +69,7 @@ footer .footer-block__heading {
   background: rgba(var(--color-foreground), .25);
   z-index: 0;
 }
+div#insta-feed span,
 .related-products__heading span {
   background: white; /* this creates the "cut" effect */
   font-weight: 100;
@@ -75,6 +78,7 @@ footer .footer-block__heading {
   position: relative;
   z-index: 1;
 }
+
 .price--on-sale .price-item--sale,
 .price .price-item.price-item--regular {
     color: red;
