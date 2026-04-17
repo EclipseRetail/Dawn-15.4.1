@@ -80,7 +80,10 @@ div#insta-feed span,
   z-index: 1;
 }
 #shopify-block-AUmRUbjl0WlpZUE1FV__instafeed_app_block_AbYeRU div#insta-feed {
-    margin: 20px 0 50px 0 !important;
+    margin: 20px 0 0 0 !important;
+}
+#shopify-block-AUmRUbjl0WlpZUE1FV__instafeed_app_block_AbYeRU .instafeed-bottom-link-wrapper {
+    justify-content: center;
 }
 
 div#insta-feed .instafeed-new-layout-container {
