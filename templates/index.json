@@ -179,6 +179,44 @@
         "include_margins": true
       }
     },
+    "17764328313abd5f70": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_7a1b3b8_F3Q7r9": {
+          "type": "ai_gen_block_7a1b3b8",
+          "settings": {
+            "divider_color": "#121212",
+            "desktop_width_percent": 100,
+            "spacing_top": 20,
+            "spacing_bottom": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_7a1b3b8_F3Q7r9"
+      ],
+      "settings": {}
+    },
+    "blocks_6CnLki": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_7a1b3b8_jcCPFg": {
+          "type": "ai_gen_block_7a1b3b8",
+          "settings": {
+            "divider_color": "#121212",
+            "desktop_width_percent": 100,
+            "spacing_top": 20,
+            "spacing_bottom": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_7a1b3b8_jcCPFg"
+      ],
+      "settings": {}
+    },
     "custom_liquid_bnWKD3": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -293,36 +331,18 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
-    },
-    "17764328313abd5f70": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_7a1b3b8_F3Q7r9": {
-          "type": "ai_gen_block_7a1b3b8",
-          "settings": {
-            "divider_color": "#121212",
-            "desktop_width_percent": 100,
-            "spacing_top": 20,
-            "spacing_bottom": 20
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_7a1b3b8_F3Q7r9"
-      ],
-      "settings": {}
     }
   },
   "order": [
     "image_banner",
     "multirow_T73QJU",
     "featured_collection",
+    "17764328313abd5f70",
     "1776429765aba803c0",
+    "blocks_6CnLki",
     "custom_liquid_bnWKD3",
     "collage",
     "video",
-    "c2a_trustmetrics_eMtphV",
-    "17764328313abd5f70"
+    "c2a_trustmetrics_eMtphV"
   ]
 }
