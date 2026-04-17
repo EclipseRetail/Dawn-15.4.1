@@ -1330,3 +1330,19 @@ class CartPerformance {
     );
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const instaFeed = document.querySelector("#insta-feed");
+
+  if (!instaFeed) return; // exits if Instafeed isn't on the page
+
+  const heading = instaFeed.querySelector("h2");
+
+  if (heading && !heading.querySelector("span")) {
+    const span = document.createElement("span");
+    span.textContent = heading.textContent;
+
+    heading.textContent = "";
+    heading.appendChild(span);
+  }
+});
