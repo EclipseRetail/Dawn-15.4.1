@@ -79,6 +79,13 @@ div#insta-feed span,
   position: relative;
   z-index: 1;
 }
+div#insta-feed {
+    margin: 20px 0 50px 0 !important;
+}
+
+div#insta-feed .instafeed-new-layout-container {
+    margin: 0 auto;
+}
 
 .price--on-sale .price-item--sale,
 .price .price-item.price-item--regular {
