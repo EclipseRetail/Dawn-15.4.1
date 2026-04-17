@@ -1332,11 +1332,11 @@ class CartPerformance {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const instaFeed = document.querySelector("div#insta-feed");
+  const instaFeed = document.querySelector("div#insta-feed"); console.log(instaFeed);
 
   if (!instaFeed) return; // exits if Instafeed isn't on the page
 
-  const heading = instaFeed.querySelector("h2");
+  const heading = instaFeed.querySelector("h2"); console.log(heading);
 
   if (heading && !heading.querySelector("span")) {
     const span = document.createElement("span");
