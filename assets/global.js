@@ -1332,17 +1332,20 @@ class CartPerformance {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const instaFeed = document.querySelector("div#insta-feed"); console.log(instaFeed);
+  const observer = new MutationObserver(function () {
+    const heading = document.querySelector("#insta-feed h2");
 
-  if (!instaFeed) return; // exits if Instafeed isn't on the page
+    if (heading && !heading.querySelector("span")) {
+      const span = document.createElement("span");
+      span.textContent = heading.textContent;
+      heading.textContent = "";
+      heading.appendChild(span);
+      observer.disconnect();
+    }
+  });
 
-  const heading = instaFeed.querySelector("h2"); console.log(heading);
-
-  if (heading && !heading.querySelector("span")) {
-    const span = document.createElement("span");
-    span.textContent = heading.textContent;
-
-    heading.textContent = "";
-    heading.appendChild(span);
-  }
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
 });
