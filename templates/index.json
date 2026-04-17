@@ -306,7 +306,7 @@
             "title_color": "#121212",
             "title_size_v2": 24,
             "alignment": "center",
-            "instafeed_margin_top": 20,
+            "instafeed_margin_top": 0,
             "instafeed_margin_bottom": 20,
             "instafeed_margin_sides": 50,
             "show_instagram_link": true,
